@@ -25,7 +25,7 @@ Abstract:
 
 Usage:
     Run the generator and redirect output:
-        $ python3 FeministStudyGenerator.py > FeministStudiesByTheHundredsOfThousands.txt
+        $ python3 FeministStudyGenerator.py > FeministStudiesByTheMillions.txt
 
     In case of overflow on Jupyter notebook:
         jupyter notebook --NotebookApp.iopub_data_rate_limit=1.0e10
