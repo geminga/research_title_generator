@@ -14,7 +14,7 @@
 Generates bullshit research titles
 
 Usage:
-$ python FeministStudyGenerator.py > FeministStudyGenerator.txt
+$ python3 FeministStudyGenerator.py > FeministStudiesByTheHundredsOfThousands.txt
 
 """
 # In case of overflow on Jupyter notebook.
@@ -22,6 +22,9 @@ $ python FeministStudyGenerator.py > FeministStudyGenerator.txt
 
 # imports...
 import itertools
+import random
+import math
+import sys
 
 # List of words
 wordlist1 = [
@@ -46,7 +49,6 @@ wordlist1 = [
 ,'Discussing'
 ,'Juxtaposing'
 ,'Normalizing'
-,'Building'
 ,'Revisiting'
 ,'Rethinking'
 ,'Reimagining'
@@ -100,7 +102,6 @@ wordlist3 = [
 wordlist4 = [
  ' new'
 ,' radical'
-,' queer'
 ,' feminist'
 ,' political'
 ,' feminine'
@@ -126,12 +127,16 @@ wordlist5 = [
 ,' binary'
 ]
 
-# imports...
-import itertools
+endings = [
+ '','?',' (a manifesto)',' (an unfinished project)',
+ ' (towards liberation)',' (notes from the field)',' (in crisis)',
+ ' (and its discontents)',' (with apologies)',' (redux)'
+]
 
-# Create the products of all list items 
-the_products = list(itertools.product(wordlist1, wordlist2, wordlist3, wordlist4, wordlist5))
+# Cartesian product of all wordlists
+the_products = itertools.product(wordlist1, wordlist2, wordlist3, wordlist4, wordlist5)
 
-# Print them out on separate lines
+# Print them all with random absurd endings
 for element in the_products:
-    print(element)
+    print("".join(element).strip() + random.choice(endings))
+
