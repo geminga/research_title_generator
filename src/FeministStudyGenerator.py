@@ -26,6 +26,8 @@ Abstract:
 Usage:
     $ python3 FeministStudyGenerator.py
         Output is written to: FeministStudiesByTheMillions.txt
+    $ No mousing. But if mousing, 666 entries:
+        python3 FeministStudyGenerator.py --sample 666
 
     In case of overflow on Jupyter notebook:
         jupyter notebook --NotebookApp.iopub_data_rate_limit=1.0e10
@@ -58,7 +60,7 @@ Citation:
 """
 
 # imports...
-import itertools, sys
+import itertools, sys, random
 
 # List of words
 wordlist1 = [
@@ -174,21 +176,55 @@ endings = [
 ,' (redux)'
 ]
 
-the_products = itertools.product(wordlist1, wordlist2, wordlist3, wordlist4, wordlist5)
+# --- helper function(s) ---
+def sample_titles(n=10):
+    """Generate n random bullshit research titles."""
+    samples = []
+    for _ in range(n):
+        base = "".join([
+            random.choice(wordlist1),
+            random.choice(wordlist2),
+            random.choice(wordlist3),
+            random.choice(wordlist4),
+            random.choice(wordlist5)
+        ]).strip()
+        ending = random.choice(endings)
+        samples.append(base + ending)
+    return samples
 
-outfile = "FeministStudiesByTheMillions.txt"
-count = 0
 
-with open(outfile, "w", encoding="utf-8") as f:
-    for element in the_products:
-        base_title = "".join(element).strip()
-        for e in endings:
-            f.write(base_title + e + "\n")
-            count += 1
-            if count % 100000 == 0:
-                print(f"{count:,} titles written...", file=sys.stderr)
+import argparse
 
-print(f"✅ Done! Wrote {count:,} titles to {outfile} 🚀. Stunning. And brave.", file=sys.stderr)
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(
+        description="Generate millions of bullshit research titles, or just a few samples."
+    )
+    parser.add_argument(
+        "--sample",
+        type=int,
+        default=0,
+        help="If set, generate N random sample titles instead of the full brute-force run."
+    )
+    args = parser.parse_args()
 
+    if args.sample > 0:
+        # --- sample-only mode ---
+        print(f"\n--- {args.sample} SAMPLE TITLES ---\n")
+        for title in sample_titles(args.sample):
+            print(" ", title)
+    else:
+        # --- full brute force run ---
+        the_products = itertools.product(wordlist1, wordlist2, wordlist3, wordlist4, wordlist5)
+        outfile = "FeministStudiesByTheMillions.txt"
+        count = 0
 
+        with open(outfile, "w", encoding="utf-8") as f:
+            for element in the_products:
+                base_title = "".join(element).strip()
+                for e in endings:
+                    f.write(base_title + e + "\n")
+                    count += 1
+                    if count % 100000 == 0:
+                        print(f"{count:,} titles written...", file=sys.stderr)
 
+        print(f"✅ Done! Wrote {count:,} titles to {outfile} 🚀. Stunning. And brave.", file=sys.stderr)
