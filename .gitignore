@@ -1,2 +1,6 @@
-# Ignore giant generated files
-FeministStudiesByThe*.txt
+# Ignore giant generated outputs
+out/
+src/FeministStudiesByTheHundredsOfThousands.txt
+src/FeministStudiesByTheMillions.txt
+*.zip
+*.txt
