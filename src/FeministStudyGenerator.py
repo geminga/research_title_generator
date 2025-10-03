@@ -24,8 +24,8 @@ Abstract:
     futures — simultaneously stunning, brave, and stunning.
 
 Usage:
-    Run the generator and redirect output:
-        $ python3 FeministStudyGenerator.py > FeministStudiesByTheMillions.txt
+    $ python3 FeministStudyGenerator.py
+        Output is written to: FeministStudiesByTheMillions.txt
 
     In case of overflow on Jupyter notebook:
         jupyter notebook --NotebookApp.iopub_data_rate_limit=1.0e10
@@ -58,7 +58,7 @@ Citation:
 """
 
 # imports...
-import itertools
+import itertools, sys
 
 # List of words
 wordlist1 = [
@@ -174,10 +174,8 @@ endings = [
 ,' (redux)'
 ]
 
-# --- generator ---
 the_products = itertools.product(wordlist1, wordlist2, wordlist3, wordlist4, wordlist5)
 
-# --- stream directly to file ---
 outfile = "FeministStudiesByTheMillions.txt"
 count = 0
 
@@ -188,9 +186,9 @@ with open(outfile, "w", encoding="utf-8") as f:
             f.write(base_title + e + "\n")
             count += 1
             if count % 100000 == 0:
-                print(f"{count:,} titles written...")
+                print(f"{count:,} titles written...", file=sys.stderr)
 
-# --- Console nod for a horrible job well achieved ---
-print(f"✅ Done! Wrote {count:,} titles to {outfile} 🚀. Stunning. And brave.")
+print(f"✅ Done! Wrote {count:,} titles to {outfile} 🚀. Stunning. And brave.", file=sys.stderr)
+
 
 
