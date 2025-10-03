@@ -211,7 +211,7 @@ if __name__ == "__main__":
         # --- sample-only mode ---
         print(f"\n--- {args.sample} SAMPLE TITLES ---\n")
         for title in sample_titles(args.sample):
-            print(" ", title)
+            print(f"- {title}")
     else:
         # --- full brute force run ---
         the_products = itertools.product(wordlist1, wordlist2, wordlist3, wordlist4, wordlist5)
