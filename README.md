@@ -71,7 +71,7 @@ If for reasons beyond comprehension you wish to cite this work:
 
 ---
 
-## A random sample of genius for you (just ~0.006 % of the actual total produced by the script. Enjoy. Utilize. Prosper.)
+## A random sample of genius for you (just ~0.007 % of the actual total produced by the script. Enjoy. Utilize. Prosper.)
 
 - Building sexualities: dreaming a sexual homosexuality (in crisis)
 - Reimagining masculinities: shaping the feminine binary (an unfinished project)
