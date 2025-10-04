@@ -17,8 +17,8 @@ traditional notions of authorship, originality, and labor.
 
 Whereas human academics require grants, tenure committees, and sabbaticals
 to generate a mere handful of publications, this machine produces **10.8 million
-peer-reviewed-quality titles in under a minute** — a rate that no human
-department can possibly rival.
+quality research project titles in under a minute** — a rate that no human(ities)
+University department can possibly rival.
 
 ### Objectives
 
