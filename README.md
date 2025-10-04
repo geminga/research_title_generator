@@ -67,7 +67,7 @@ acknowledges the unpaid emotional labor of graduate students everywhere.
 If for reasons beyond comprehension you wish to cite this work:
 
 > Laukkanen, Manne. *Feminist Study Generator: Thus Goeth the Academic Tenure Satan Ballistic.*
-> Journal of Pointless Waste of Tax-Money to Academic Insanity, 2023. GNU GPL v3.
+> Journal of Pointless Waste of Tax-Money to Academic Insanity, 2025. GNU GPL v3.
 
 ---
 
