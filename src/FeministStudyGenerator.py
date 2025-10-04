@@ -20,7 +20,7 @@ Abstract:
     as both praxis and critique, the generator decenters authorial
     intentionality, thereby rendering visible the hidden structures of
     epistemic violence and playful semiotic collapse. The resulting
-    10.8 million titles constitute a radical archive of counter-hegemonic
+    9 126 000 titles constitute a radical archive of counter-hegemonic
     futures — simultaneously stunning, brave, and stunning.
 
 Usage:

@@ -16,7 +16,7 @@ across intersecting wordlists, the *Feminist Study Generator* destabilizes
 traditional notions of authorship, originality, and labor.
 
 Whereas human academics require grants, tenure committees, and sabbaticals
-to generate a mere handful of publications, this machine produces **10.8 million
+to generate a mere handful of publications, this machine produces **9.126 million
 quality research project titles in under a minute** — a rate that no human(ities)
 University department can possibly rival.
 
